@@ -1,0 +1,31 @@
+services:
+  - type: web
+    name: my-django-app
+    env: python
+    buildCommand: pipenv install --deploy --ignore-pipfile && python manage.py collectstatic --noinput
+    startCommand: gunicorn mysite.wsgi --bind 0.0.0.0:$PORT
+    envVars:
+      - key: DJANGO_SETTINGS_MODULE
+        value: mysite.settings
+      - key: SECRET_KEY
+        value: django-insecure-(26th=sd88e962k36e_7+x7hgz9*o6tg352mh#!1t^%6x*w%x3
+      - key: DATABASE_ENGINE
+        value: django.db.backends.postgresql_psycopg2
+      - key: DATABASE_NAME
+        value: koyebdb
+      - key: DATABASE_USER
+        value: koyeb-adm
+      - key: DATABASE_PASSWORD
+        value: yTNc9RMnkp0u
+      - key: DATABASE_HOST
+        value: ep-royal-silence-a2d29bc0.eu-central-1.pg.koyeb.app
+      - key: DATABASE_PORT
+        value: 5432
+      - key: EMAIL_HOST
+        value: smtp.meta.ua
+      - key: EMAIL_PORT
+        value: 465
+      - key: EMAIL_HOST_USER
+        value: python_web22@meta.ua
+      - key: EMAIL_HOST_PASSWORD
+        value: 8lyrMibko
