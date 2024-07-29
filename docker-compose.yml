@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    command: gunicorn mysite.wsgi:application --bind 0.0.0.0:8000
+    volumes:
+      - .:/code
+    ports:
+      - "8000:8000"
+    environment:
+      DEBUG: '1'
+      DJANGO_ALLOWED_HOSTS: 'localhost 127.0.0.1 [::1]'
+      DATABASE_ENGINE: django.db.backends.postgresql_psycopg2
+      DATABASE_NAME: koyebdb
+      DATABASE_USER: koyeb-adm
+      DATABASE_PASSWORD: yTNc9RMnkp0u
+      DATABASE_HOST: ep-royal-silence-a2d29bc0.eu-central-1.pg.koyeb.app
+      DATABASE_PORT: 5432
