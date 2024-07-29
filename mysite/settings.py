@@ -31,12 +31,7 @@ SECRET_KEY = env("SECRET_KEY")
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    ".koyeb.app",
-    "bad-audra-harley029-2fdbe6c9.koyeb.app",
-    "localhost",
-    "127.0.0.1",
-    "https://mysite-vb7u.onrender.com",
-    "https://personnalassistant-231c5e24d5ac.herokuapp.com/",
+    "*"
 ]
 
 
