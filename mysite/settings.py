@@ -35,6 +35,7 @@ ALLOWED_HOSTS = [
     "bad-audra-harley029-2fdbe6c9.koyeb.app",
     "localhost",
     "127.0.0.1",
+    "https://mysite-vb7u.onrender.com",
 ]
 
 
