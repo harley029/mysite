@@ -1,0 +1,44 @@
+{% extends 'contacts/delete/delete_base.html' %}
+
+{% block title %}Delete Contacts{% endblock %}
+
+{% block content %}
+    <style>
+        .contact-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .contact-item form {
+            margin: 0;
+        }
+
+        .btn-delete {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row header-box pt-3 mb-3">
+            <div class="col-md-12 mb-3">
+                <h1>Delete Contacts</h1>
+                <ul class="list-group">
+                    {% for contact in contacts %}
+                    <li class="list-group-item contact-item">
+                        {{ contact.full_name }}
+                        <a href="{% url 'contact_delete_confirm' contact.pk %}"
+                            class="btn btn-danger btn-sm btn-delete">Delete</a>
+                    </li>
+                    {% endfor %}
+                </ul>
+                <a href="{% url 'contacts' %}" class="btn btn-secondary mt-3">Back to Contacts</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+{% endblock %}>

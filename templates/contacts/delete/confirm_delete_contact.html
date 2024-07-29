@@ -1,0 +1,9 @@
+{% extends "contacts/delete/confirm_delete_base.html" %}
+
+{% block title %}Confirm Delete Contact{% endblock %}
+
+{% block message %}Are you sure you want to delete the contact "{{ object.full_name }}"?{% endblock %}
+
+{% block cancel_url %}
+{% url 'contact_delete_list' %}
+{% endblock %}

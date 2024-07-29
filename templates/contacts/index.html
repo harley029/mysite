@@ -1,0 +1,48 @@
+{% extends 'contacts/base.html' %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col-md-8">
+        {% for record in records %}
+        <div class="quote" itemscope="" itemtype="http://schema.org/CreativeWork">
+            <span>
+                <small class="author" itemprop="author">
+                    <a href="/contact/{{ record.contact.id }}/">{{ record.contact.full_name }}</a>
+                </small>
+            </span>
+            <span class="text" itemprop="text">
+                {{ record.note }}
+            </span>
+            <div class="tags">
+                Tags:
+                {% for tag in record.tags.all %}
+                <a class="tag" href="/tag/{{ tag.name }}/">{{ tag.name }}</a>
+                {% endfor %}
+            </div>
+        </div>
+        {% endfor %}
+      
+    <nav>
+        <ul class="pager">
+            {% if records.has_previous %}
+            <li class="previous">
+                <a href="{% url 'contacts_paginate' page=records.previous_page_number %}">
+                    <span aria-hidden="true">←</span> Previous
+                </a>
+            </li>
+            {% endif %}
+    
+            {% if records.has_next %}
+            <li class="next">
+                <a href="{% url 'contacts_paginate' page=records.next_page_number %}">
+                    Next <span aria-hidden="true">→</span>
+                </a>
+            </li>
+            {% endif %}
+        </ul>
+    </nav>
+        <div style="height: 70px;"></div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'contacts/update/update_base.html' %}
+
+{% block content %}
+
+<div class="col-md-12 mb-3">
+    <a class="btn btn-secondary" href="{% url 'main_update' %}">Back</a>
+</div>
+            <div class="col-md-12">
+                <ul class="list-group">
+                    {% for tag in tags %}
+                    <li class="list-group-item tag-item">
+                        <span class="tag-name">{{ tag.name }}</span>
+                        <a href="{% url 'update_tag' tag.pk %}" class="btn btn-sm btn-primary edit-button">Edit</a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+    {% endblock %}

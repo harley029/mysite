@@ -1,0 +1,43 @@
+{% extends 'contacts/base.html' %}
+{% block content %}
+
+<h3>Viewing tag: <a href="{% url 'tag_detail_paginate' tag_name=tag page=1 %}">{{ tag }}</a></h3>
+<div class="row">
+  <div class="col-md-8">
+    {% for contact in contacts %}
+    <div class="quote" itemscope="" itemtype="http://schema.org/CreativeWork">
+      <span><small class="author" itemprop="author"><a href="{% url 'contact_detail' contact_id=contact.contact.id %}">{{ contact.contact.full_name }}</a></small></span>
+      <span class="text" itemprop="text">{{ contact.note }}</span>
+      
+      <div class="tags">
+        Tags: {% for tag in contact.tags.all %}
+        <a class="tag" href="{% url 'tag_detail_paginate' tag_name=tag.name page=1 %}">{{ tag.name }}</a>
+        {% endfor %}
+      </div>
+    </div>
+    {% endfor %}
+
+    <nav>
+      <ul class="pager">
+        {% if contacts.has_previous %}
+        <li class="previous">
+          <a href="{% url 'tag_detail_paginate' tag_name=tag page=contacts.previous_page_number %}">
+            <span aria-hidden="true">←</span> Previous
+          </a>
+        </li>
+        {% endif %}
+        {% if contacts.has_next %}
+        <li class="next">
+          <a href="{% url 'tag_detail_paginate' tag_name=tag page=contacts.next_page_number %}">
+            Next <span aria-hidden="true">→</span>
+          </a>
+        </li>
+        {% endif %}
+      </ul>
+    </nav>
+
+    <div style="height: 70px;"></div>
+  </div>
+</div>
+
+{% endblock %}

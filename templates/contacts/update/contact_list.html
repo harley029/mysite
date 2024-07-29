@@ -1,0 +1,19 @@
+{% extends 'contacts/update/update_base.html' %}
+
+{% block content %}
+
+<div class="col-md-12 mb-3">
+    <a class="btn btn-secondary" href="{% url 'main_update' %}">Back</a>
+</div>
+            <div class="col-md-12">
+                <ul class="list-group">
+                    {% for contact in contacts %}
+                    <li class="list-group-item contact-item">
+                        <span class="contact-name">{{ contact.full_name }}</span>
+                        <a href="{% url 'update_contact' contact.pk %}"
+                            class="btn btn-sm btn-primary edit-button">Edit</a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+    {% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'files/base.html' %}
+
+{% block body %}
+<div class="container mt-3">
+    <h1>Files</h1>
+    <div class="row">
+        {% for f in fs %}
+        <div class="col-md-6">
+            <div class="card" style="width: 18rem;">
+                <img src="{{f.path.url}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">{{f.description}}</p>
+                    <a href="{% url 'files:edit' f.id %}" class="btn btn-info">Edit description</a>
+                    <a href="{% url 'files:remove' f.id %}" class="btn btn-danger">Delete file</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+
+    </div>
+</div>
+{% endblock %} 

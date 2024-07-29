@@ -1,0 +1,9 @@
+{% extends "contacts/delete/confirm_delete_base.html" %}
+
+{% block title %}Confirm Delete Note{% endblock %}
+
+{% block message %}Are you sure you want to delete the note "{{ object.note }}"?{% endblock %}
+
+{% block cancel_url %}
+{% url 'note_delete_list' %}
+{% endblock %}

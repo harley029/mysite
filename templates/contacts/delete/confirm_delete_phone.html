@@ -1,0 +1,9 @@
+{% extends "contacts/delete/confirm_delete_base.html" %}
+
+{% block title %}Confirm Delete Phone Number{% endblock %}
+
+{% block message %}Are you sure you want to delete the phone number "{{ object.number }}"?{% endblock %}
+
+{% block cancel_url %}
+{% url 'phone_number_delete_list' %}
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends 'contacts/base.html' %}
+
+{% block content %}
+
+<div class="author-details">
+    <h3 class="author-title">{{ contact.full_name }}</h3>
+    <p>
+        <strong>Born:</strong> <span class="author-born-date">{{ contact.birthday }}</span>
+    </p>
+    <p>
+        <strong>Address:</strong> <span class="author-address">{{ contact.address }}</span>
+    </p>
+    <p>
+        <strong>Email:</strong> <span class="author-email">{{ contact.email }}</span>
+    </p>
+    <p>
+        <strong>Phone Numbers:</strong>
+        <ul>
+            {% for phone in phone_numbers %}
+            <li>{{ phone.number }}</li>
+            {% endfor %}
+        </ul>
+    </p>
+    <p>
+        <strong>Note:</strong>
+        <span class="note">{{ note }}</span>
+    </p>
+</div>
+
+{% endblock %}

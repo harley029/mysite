@@ -1,0 +1,25 @@
+{% extends 'contacts/update/update_base.html' %}
+
+{% block content %}
+    <div class="col-md-12 mb-3">
+        <a class="btn btn-secondary" href="{% url 'main_update' %}">Back</a>
+    </div>
+
+    <div class="col-md-12">
+        {% for phone in phone_numbers %}
+        <div class="phone-item">
+            <div class="phone-details">
+                <div>{{ phone.contact.full_name }}</div>
+                <div>{{ phone.number }}</div>
+            </div>
+            <div class="phone-button">
+                <a href="{% url 'update_phone_number' phone.pk %}" class="btn btn-sm btn-primary">Update</a>
+            </div>
+        </div>
+        {% empty %}
+        <div class="phone-item text-center">
+            No phones were found.
+        </div>
+        {% endfor %}
+    </div>
+{% endblock %}

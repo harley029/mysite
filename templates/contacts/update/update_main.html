@@ -1,0 +1,13 @@
+{% extends 'contacts/update/update_base.html' %}
+
+{% block content %}
+
+    <div class="col-md-12">
+        <a class="btn btn-secondary btn-custom" href="{% url 'contact_list' %}">Update Contact</a>
+        <a class="btn btn-secondary btn-custom" href="{% url 'phone_number_list' %}">Update Phone</a>
+        <a class="btn btn-secondary btn-custom" href="{% url 'tag_list' %}">Update Tag</a>
+        <a class="btn btn-secondary btn-custom" href="{% url 'note_list' %}">Update Note</a>
+        
+    </div>
+
+{% endblock %}

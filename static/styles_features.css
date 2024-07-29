@@ -1,0 +1,251 @@
+body {
+  background: #f6f6fa;
+  padding: 40px 40px 40px 40px;
+  font-family: "Montserrat", sans-serif;
+}
+.ul,
+.ol {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.wrapper {
+  background: #ffffff;
+  display: flex;
+  flex-direction: row-reverse;
+  width: 1200px;
+  margin: 0, auto;
+  
+}
+.main-content {
+  padding: 88px 80px 40px 80px;
+  box-sizing: border-box;
+}
+
+.sidebar {
+  background: #e0ebfe;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  box-sizing: border-box;
+  width: 370px;
+}
+.sidebar-content {
+  padding-top: 40px;
+  padding-left: 40px;
+  padding-right: 40px;
+  box-sizing: border-box;
+}
+/* секция контактов */
+.contacts-title {
+  color: #161d2a;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: normal;
+  margin-top: 0;
+  margin-bottom: 8 px;
+}
+.contacts-type {
+  color: #161d2a;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+  margin-right: 8px;
+}
+.contacts-item {
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+.contacts-container {
+  margin-bottom: 40px;
+}
+.contacts-container .contacts-detales {
+  color: #2e2f42;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  text-decoration: none;
+}
+.contacts-container .contacts-detales:active {
+  color: blue;
+}
+.contacts-container .contacts-detales:hover,
+.contacts-container .contacts-detales:focus {
+  color: #404bbf;
+  text-decoration: underline;
+}
+/* секція skills */
+.skills-container {
+  margin-bottom: 40px;
+}
+.skills-title {
+  color: #161d2a;
+  font-size: 22px;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+.skills-list {
+  padding-left: 16px;
+  color: #161d2a;
+}
+
+.skills-list-item {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+/* секция My info */
+.my-info-container {
+  margin-top: 0px;
+  /* added */
+  margin-bottom: 40px;
+}
+.role-title {
+  color: #000;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17px;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+.candidate-name {
+  color: #000;
+  font-size: 45px;
+  font-weight: 700;
+  line-height: 55px;
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+.candidate-description {
+  color: #595959;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  margin-bottom: 0;
+}
+/* секция проектов */
+.project-container {
+  margin-bottom: 40px;
+}
+.projects-title {
+  color: #000;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 27px;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+.projects {
+  padding-left: 16px;
+}
+.projetcs-list {
+  color: #000;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.projects .projects-links {
+  color: #2e2f42;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  text-decoration: none;
+}
+.projects-types {
+  color: #595959;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+}
+.projects .projects-links:active {
+  color: blue;
+}
+.projects .projects-links:hover,
+.projects .projects-links:focus {
+  color: #404bbf;
+  text-decoration: underline;
+}
+/* секция experience */
+.experience-container {
+  margin-bottom: 0;
+}
+.experience-title {
+  color: #000;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 27px;
+  margin-bottom: 8px;
+}
+.company-container {
+  margin-bottom: 12px;
+}
+.company-role-title {
+  color: #000;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+.company-title {
+  color: #6d9bf5;
+}
+.company-working-time {
+  color: #a8a8a8;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15px;
+  margin-bottom: 8px;
+}
+.working-time-slash {
+  color: #000;
+}
+
+.role-skills-item {
+  color: #595959;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+}
+.role-skills {
+  padding-left: 16px;
+}
+
+/* секция Образованик */
+.education-container {
+  margin-top: 40px;
+  box-sizing: border-box;
+}
+.education-title {
+  color: #000;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: normal;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+.university {
+  color: #6d9bf5;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: normal;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+.spetiality {
+  color: #000;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: normal;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+.study-period {
+  color: #a8a8a8;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 0;
+  margin-bottom: 12px;
+}

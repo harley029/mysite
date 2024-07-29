@@ -1,0 +1,13 @@
+SECRET_KEY=django-insecure-(26th=sd88e962k36e_7+x7hgz9*o6tg352mh#!1t^%6x*w%x3
+
+DATABASE_ENGINE=django.db.backends.postgresql_psycopg2
+DATABASE_NAME=owls
+DATABASE_USER=postgres
+DATABASE_PASSWORD=8lyrMibko
+DATABASE_HOST=127.0.0.1
+DATABASE_PORT=5432
+
+EMAIL_HOST=smtp.meta.ua
+EMAIL_PORT=465
+EMAIL_HOST_USER=python_web22@meta.ua
+EMAIL_HOST_PASSWORD=8lyrMibko
