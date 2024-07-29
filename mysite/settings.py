@@ -30,7 +30,12 @@ SECRET_KEY = env("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    ".koyeb.app",
+    "bad-audra-harley029-2fdbe6c9.koyeb.app",
+    "localhost",
+    "127.0.0.1",
+]
 
 
 # Application definition
