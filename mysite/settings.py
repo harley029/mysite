@@ -36,6 +36,7 @@ ALLOWED_HOSTS = [
     "localhost",
     "127.0.0.1",
     "https://mysite-vb7u.onrender.com",
+    "https://personnalassistant-231c5e24d5ac.herokuapp.com/",
 ]
 
 
