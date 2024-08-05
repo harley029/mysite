@@ -11,6 +11,7 @@ bs4 = "0.0.2"
 requests = "2.32.3"
 lxml = "5.2.2"
 gunicorn = "22.0.0"
+whitenoise = "6.7.0"
 
 [dev-packages]
 

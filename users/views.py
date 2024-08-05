@@ -19,7 +19,7 @@ class RegisterView(View):
 
     def dispatch(self, request, *args, **kwargs):
         if request.user.is_authenticated:
-            return redirect(to="quotes:root")
+            return redirect(to="contacts")
         return super().dispatch(request, *args, **kwargs)
     # dispatch попереджає перехід на signup залогіненому юзеру
     def get(self, request):
@@ -33,14 +33,6 @@ class RegisterView(View):
             messages.success(request, message=f'Account for {username} was created successfully')
             return redirect(to="users:login")
         return render(request, self.template_name, context={"form": form})
-
-
-# class CustomLogoutView(View):
-#     template_name = "users/logout.html"
-
-#     def post(self, request):
-#         logout(request)
-#         return render(request, self.template_name)
 
 
 class CustomLogoutView(View):
