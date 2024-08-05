@@ -35,6 +35,14 @@ class RegisterView(View):
         return render(request, self.template_name, context={"form": form})
 
 
+# class CustomLogoutView(View):
+#     template_name = "users/logout.html"
+
+#     def post(self, request):
+#         logout(request)
+#         return render(request, self.template_name)
+
+
 class CustomLogoutView(View):
     def post(self, request):
         logout(request)
